@@ -6,7 +6,17 @@ const exhbs = require('express-handlebars')
 app.engine('hbs', exhbs({ defaultLayout: 'main', extname: 'hbs' }))
 app.set('view engine', 'hbs')
 
+app.use(express.urlencoded({ extended: false }))
+app.use(express.json())
+
 app.get('/', (req, res) => {
+  res.render('index')
+})
+
+app.post('/', (req, res) => {
+  if (req.body) {
+    console.log(req.body.selection)
+  }
   res.render('index')
 })
 
