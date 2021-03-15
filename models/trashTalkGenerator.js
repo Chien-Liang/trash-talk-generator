@@ -6,4 +6,13 @@ const task = {
 
 const phrase = ['很簡單', '很容易', '很快', '很正常']
 
-// const speakTrashTalk(person)
+const getId = num => Math.floor(Math.random() * num)
+
+const trashTalk = selection => {
+  const target = task[selection]
+  const taskid = getId(target.length)
+  const phraseId = getId(phrase.length)
+  return `${target[taskid]}，應該${phrase[phraseId]}吧！`
+}
+
+module.exports = trashTalk

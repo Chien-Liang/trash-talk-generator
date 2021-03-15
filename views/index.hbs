@@ -1,6 +1,6 @@
 <div class="container my-2 p-1 d-flex flex-column justify-content-around">
   <span class="my-2">
-    <h1 class="text-center">今天，你想跟誰講幹話呢？</h1>
+    <h1 class="text-center">今天，你想對誰說幹話呢？</h1>
   </span>
 
   <span class="my-2" id="your-selection">
@@ -35,10 +35,12 @@
       >
       <div class="col-2">
         <button type="submit" class="btn btn-success btn-lg" id="button">
-          講幹話！
+          Go！
         </button>
       </div>
-      <div class="col-9 m-1 result" id="trash-talk"><h5>大聲說出來！</h5></div>
+      <div class="col-9 m-1 result" id="trash-talk">
+        {{#if selection}}<h4>{{speech}}</h4>{{else}}<h5>大聲說出來！</h5>{{/if}}
+      </div>
     </div>
   </span>
 </form>
