@@ -1,0 +1,26 @@
+body {
+  box-sizing: border-box;
+}
+
+img {
+  /* max-width: 50vw; */
+  max-width: 45vh;
+  height: 40vh;
+  border: solid 2px salmon;
+}
+
+.card-title {
+  font-size: 1.5rem;
+}
+
+.generation {
+  height: 20vh;
+}
+
+.result {
+  height: 18vh;
+}
+
+h5 {
+  color: rgba(161, 165, 168, 0.7);
+}
