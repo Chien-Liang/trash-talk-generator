@@ -21,22 +21,16 @@ exports.trashTalk = selection => {
   const taskid = getId(element.length)
   const phraseId = getId(phrase.length)
   let target = ''
-  exports.engineer = false
-  exports.designer = false
-  exports.entrepreneur = false
 
   // Function Implement
   switch (selection) {
     case 'engineer':
-      this.engineer = true
       target = '工程師'
       break
     case 'designer':
-      this.designer = true
       target = '設計師'
       break
     case 'entrepreneur':
-      this.entrepreneur = true
       target = '創業家'
       break
     default:
