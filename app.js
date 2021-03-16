@@ -11,9 +11,9 @@ app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 
 /* Router */
-const indexRouter = require('./controllers/indexRouter')
-app.get('/', indexRouter.getIndex)
-app.post('/', indexRouter.postIndex)
+const indexCtrl = require('./controllers/indexController')
+app.get('/', indexCtrl.getIndex)
+app.post('/', indexCtrl.postSelection)
 
 /* Server */
 app.listen(3000, () =>

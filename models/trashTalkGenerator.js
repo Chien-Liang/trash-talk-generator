@@ -9,10 +9,22 @@ const phrase = ['很簡單', '很容易', '很快', '很正常']
 const getId = num => Math.floor(Math.random() * num)
 
 const trashTalk = selection => {
-  const target = task[selection]
-  const taskid = getId(target.length)
+  const element = task[selection]
+  const taskid = getId(element.length)
   const phraseId = getId(phrase.length)
-  return `${target[taskid]}，應該${phrase[phraseId]}吧！`
+  let target = ''
+  switch (selection) {
+    case 'engineer':
+      target = '工程師'
+      break
+    case 'designer':
+      target = '設計師'
+      break
+    case 'entrepreneur':
+      target = '創業家'
+      break
+  }
+  return `身為一個${target}，${element[taskid]}，應該${phrase[phraseId]}吧！`
 }
 
 module.exports = trashTalk
