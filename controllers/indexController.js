@@ -1,4 +1,4 @@
-const trashTalk = require('../models/trashTalkGenerator')
+const speak = require('../models/trashTalkGenerator')
 
 exports.getIndex = (req, res) => {
   res.render('index')
@@ -6,9 +6,11 @@ exports.getIndex = (req, res) => {
 
 exports.postSelection = (req, res) => {
   const selection = req.body.selection
-  const engineer = selection === 'engineer'
-  const designer = selection === 'designer'
-  const entrepreneur = selection === 'entrepreneur'
-  const speech = trashTalk(selection)
-  res.render('index', { engineer, designer, entrepreneur, speech })
+  const speech = speak.trashTalk(selection)
+  res.render('index', {
+    engineer: speak.engineer,
+    designer: speak.designer,
+    entrepreneur: speak.entrepreneur,
+    speech,
+  })
 }
