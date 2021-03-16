@@ -9,6 +9,9 @@ const phrase = ['很簡單', '很容易', '很快', '很正常']
 const getId = num => Math.floor(Math.random() * num)
 
 const trashTalk = selection => {
+  if (!selection) {
+    return '找個人說說話嘛🤡'
+  }
   const element = task[selection]
   const taskid = getId(element.length)
   const phraseId = getId(phrase.length)

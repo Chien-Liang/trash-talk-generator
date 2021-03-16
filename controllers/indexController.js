@@ -10,5 +10,5 @@ exports.postSelection = (req, res) => {
   const designer = selection === 'designer'
   const entrepreneur = selection === 'entrepreneur'
   const speech = trashTalk(selection)
-  res.render('index', { selection, engineer, designer, entrepreneur, speech })
+  res.render('index', { engineer, designer, entrepreneur, speech })
 }
