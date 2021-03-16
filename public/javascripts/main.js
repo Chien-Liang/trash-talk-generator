@@ -6,5 +6,5 @@ yourSelection.addEventListener('click', event => {
   if (!card) {
     return
   }
-  input.checked ? (input.checked = false) : (input.checked = true)
+  input.checked = true
 })

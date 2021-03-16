@@ -7,23 +7,23 @@
     <form action="/" method="POST" class="d-flex flex-column justify-content-around">
       <div class="card-container d-flex justify-content-around">
         <div class="card" style="width: 18rem">
-          <img src="/images/angry-designer.jpg" class="card-img-top" alt="..." />
+          <img src="/images/angry-developer.jpg" class="card-img-top" alt="..." />
           <div class="card-body mx-auto">
-            <input type="radio" name="selection" id="designer" value="designer"/>
-            <label for="selection" class="card-title">設計師</label>
+            <input type="radio" name="selection" id="engineer" value="engineer" {{#if engineer}} checked {{/if}}/>
+            <label for="selection" class="card-title">工程師</label>
           </div>
         </div>
         <div class="card" style="width: 18rem">
-          <img src="/images/angry-developer.jpg" class="card-img-top" alt="..." />
+          <img src="/images/angry-designer.jpg" class="card-img-top" alt="..." />
           <div class="card-body mx-auto">
-            <input type="radio" name="selection" id="engineer" value="engineer"/>
-            <label for="selection" class="card-title">工程師</label>
+            <input type="radio" name="selection" id="designer" value="designer" {{#if designer}} checked {{/if}}/>
+            <label for="selection" class="card-title">設計師</label>
           </div>
         </div>
         <div class="card" style="width: 18rem">
           <img src="/images/angry-founder.jpg" class="card-img-top" alt="..." />
           <div class="card-body mx-auto">
-            <input type="radio" name="selection" id="entrepreneur" value="entrepreneur"/>
+            <input type="radio" name="selection" id="entrepreneur" value="entrepreneur" {{#if entrepreneur}} checked {{/if}}/>
             <label for="selection" class="card-title">創業家</label>
           </div>
         </div>
@@ -38,8 +38,8 @@
           Go！
         </button>
       </div>
-      <div class="col-9 m-1 result" id="trash-talk">
-        {{#if selection}}<h4>{{speech}}</h4>{{else}}<h5>大聲說出來！</h5>{{/if}}
+      <div class="col-9 m-1 result py-auto d-flex align-items-center" id="trashTalk">
+        {{#if selection}}<h3>{{speech}}</h3>{{else}}<h5>大聲說出來！</h5>{{/if}}
       </div>
     </div>
   </span>

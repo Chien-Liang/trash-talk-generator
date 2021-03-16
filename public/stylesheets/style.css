@@ -2,11 +2,16 @@ body {
   box-sizing: border-box;
 }
 
+.card:hover,
+.card-title:hover,
+input:hover {
+  cursor: pointer;
+}
+
 img {
   /* max-width: 50vw; */
   max-width: 45vh;
   height: 40vh;
-  border: solid 2px salmon;
 }
 
 .card-title {

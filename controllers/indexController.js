@@ -6,6 +6,9 @@ exports.getIndex = (req, res) => {
 
 exports.postSelection = (req, res) => {
   const selection = req.body.selection
+  const engineer = selection === 'engineer'
+  const designer = selection === 'designer'
+  const entrepreneur = selection === 'entrepreneur'
   const speech = trashTalk(selection)
-  res.render('index', { selection, speech })
+  res.render('index', { selection, engineer, designer, entrepreneur, speech })
 }
